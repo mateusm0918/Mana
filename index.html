@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Família</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      margin-top: 30px;
+      font-size: 36px;
+    }
+
+    .imagem-topo {
+      width: 300px;
+      height: auto;
+      margin: 20px auto;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    }
+
+    .botoes {
+      margin: 20px;
+    }
+
+    .botoes button {
+      background-color: red;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 5px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .botoes button:hover {
+      background-color: darkred;
+    }
+
+    #fotoPessoa {
+      margin-top: 30px;
+    }
+
+    #fotoPessoa img {
+      width: 300px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+    }
+  </style>
+</head>
+<body>
+  <h1>Família</h1>
+  <img class="imagem-topo" src="familia.jpg" alt="Foto da Família">
+
+  <div class="botoes">
+    <button onclick="mostrarFoto('mateus.jpg')">Mateus</button>
+    <button onclick="mostrarFoto('eduarda.jpg')">Eduarda</button>
+    <button onclick="mostrarFoto('sergio.jpg')">Sergio</button>
+    <button onclick="mostrarFoto('claudete.jpg')">Claudete</button>
+  </div>
+
+  <div id="fotoPessoa"></div>
+
+  <script>
+    function mostrarFoto(imagem) {
+      const container = document.getElementById('fotoPessoa');
+      container.innerHTML = `<img src="${imagem}" alt="Foto da pessoa">`;
+    }
+  </script>
+</body>
+</html>
